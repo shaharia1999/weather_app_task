@@ -5,6 +5,13 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  
+  
+}
+.bg{
+    background-image: url(../src/image/lightning-bolts.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 @media (prefers-reduced-motion: no-preference) {

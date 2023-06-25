@@ -1,0 +1,13 @@
+.bg{
+    background-image: url(../image/lightning-bolts.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.flex_css{
+display: flex;
+flex-flow: row;
+align-items: center;
+justify-content: center;
+
+
+}

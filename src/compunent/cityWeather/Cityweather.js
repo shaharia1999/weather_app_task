@@ -12,6 +12,22 @@ const Cityweather = () => {
     const celcious=Math.round(days?.[0].main.temp-273.15)
     const date=dateDay;
   
+    if(isLoading){
+        return(
+           <div className='
+                bg-[{img}]  flex    w-[100%] justify-center items-center text-white'>
+                <div className='flex     w-[100%] justify-center items-center'>
+                    <h1 className='text-7xl font-bold mr-6 '>Loading &#8451;</h1>
+                    {
+                        isLoading?  <h2 className='text-4xl font-semibold mr-3'>loading</h2>:  <h2 className='text-4xl font-semibold mr-3'>city</h2>
+                    }
+               
+
+                         <h6 className='text-1xl'>weather</h6>           
+                </div>
+             </div> 
+        )
+    }
 if(data?.cod==200){ return (
         <div className=' text-white '>
             {isLoading?<p>loading</p>:<></>}

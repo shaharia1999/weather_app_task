@@ -9,22 +9,13 @@ import { useState } from 'react';
 const Weather = () => {
     const [city,setCity]=useState('dhaka');
 const url=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=32ba0bfed592484379e51106cef3f204`
-
   const getcode=async()=>{
 const res=await fetch(url)
     const data=await res.json();
     return data
 }
-const {data,error,isLoading}=useQuery('quete',()=>getcode());
+const {data,error,isLoading}=useQuery(['city-api',city],()=>getcode())
 
-console.log(city)
-
-
- 
-
-
-   
-    
     return (
         <UserContex.Provider value={{data,error,isLoading}}>
             <div className=' h-[100vh] flex bg'>
